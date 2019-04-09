@@ -1,0 +1,375 @@
+input[type="file"] {
+	display: none;
+}
+
+.custom-file-upload {
+	display: inline-block;
+	padding: 6px 12px;
+	background-image: linear-gradient(#eee, white 33%);
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.custom-file-upload:hover {
+	background-image: linear-gradient(#eee, white 67%);
+}
+
+.custom-file-upload:active {
+	transform: translateY(1px);
+	transition: transform 0.1s ease-in-out;
+	box-shadow: 0 0 7px #ddd;
+}
+
+#dodaj_proizvod_modal .modal-dialog,
+#izmijeni_proizvod_modal .modal-dialog,
+#dodaj_blog_modal .modal-dialog,
+#izmijeni_blog_modal .modal-dialog,
+#dodaj_konkurs_modal .modal-dialog,
+#izmijeni_konkurs_modal .modal-dialog {
+	width: 75%;
+}
+
+.error-poruka-dodaj,
+.error-poruka-izmjena,
+.error-dodaj-blog {
+	position: relative;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+	border-radius: .4em;
+	padding: 5px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+
+.error-poruka-dodaj::after,
+.error-dodaj-blog::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top-color: #eee;
+	border-bottom: 0;
+	margin-left: -6px;
+	margin-bottom: -6px;
+}
+
+.tags-input {
+	border: 1px solid rgb(210,214,222);
+	display: inline-block;
+	width: 100%;
+	padding: 6px 12px;
+}
+
+.tags-input .tag {
+	display: inline-block;
+	margin-right:  0.33em;
+	margin-top: 0.25em;
+	padding: 0.5em 0.75em;
+	font-size: 85%;
+	background-color: #ddd;
+	transition: all 0.1s linear;
+	cursor: pointer;
+}
+
+.tags-input .tag:hover {
+	background-color: #3af;
+	color: white;
+}
+
+
+.tags-input .tag .close::after {
+	content: '*';
+	font-weight: bold;
+	font-size: 16px;
+	display: inline-block;
+	transform: scale(1.4);
+	margin-left: 0.75em;
+}
+
+.tags-input .tag .close:hover::after {
+	color: red;
+}
+
+.tags-input .main-input {
+	border: 0;
+	outline: 0;
+	padding: 0;
+}
+
+.ime-link {
+	color: rgba(255,255,255,0.8);
+}
+
+.ime-link:hover {
+	color: white;
+}
+
+.slika-link:hover {
+	background-color: transparent;
+}
+
+#profilna-foto,
+#default-profilna-foto {
+	width: 120px;
+	border-radius: 3px;
+	margin: 10px 0;
+}
+
+#upload-labela {
+	margin-top: 10px;
+}
+
+#crnogorski > h4,
+#engleski > h4 {
+	text-align: left;
+}
+
+[for] {
+	text-align: left;
+}
+
+
+.custom-button {
+	padding: 10px;
+	color: white;
+	background-color: #1FB264;
+	border: none;
+	border-bottom: 4px solid #15824B;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+
+.custom-button:hover {
+	background-color: #1aa059;
+}
+
+.custom-button:active {
+	border-bottom: none;
+}
+
+.custom-text {
+	margin-left: 10px;
+	font-family: sans-serif;
+	color: #aaa;
+	font-style: italic;
+}
+
+.prikaz-slike {
+	display: block;
+	max-width: 150px;
+	max-height: 150px;
+	margin: 10px 0;
+	border-radius: 3px;
+}
+
+.button-ukloni {
+	padding: 7px 10px;
+	background-color: #cd4535;
+	color: white;
+	border: none;
+	border-bottom: 4px solid #b02818;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all .2s ease;
+}
+
+.button-ukloni:hover {
+	background-color: #c13b2a;
+}
+
+.button-ukloni:active {
+	border-bottom: none;
+}
+
+.fill {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	background-image: url('http://source.unsplash.com/random/150x150');
+	top: 5px;
+	cursor: pointer;
+}
+
+ .empty {
+	margin: 10px;
+	border: 3px salmon solid;
+	background-color: white;
+}
+
+.hold {
+	border: solid #ccc 4px;
+}
+
+.hovered {
+	background: #f4f4f4;
+	border-style: dashed;
+}
+
+.invisible {
+	display: none;
+}
+
+
+.dropzone {
+	width: 100%;
+	line-height: 200px;
+	text-align: center;
+}
+
+.dropzone.dragover {
+	border-color: #15824B;
+	background-color: #1FB264;
+	color: #15824B;
+}
+
+#promijeni_lozinku_forma .dropzone.dragover {
+	color: #ecf0f5;
+}
+
+.image-upload-wrap {
+	margin-top: 20px;
+  border: 3px dashed #1FB264;
+  position: relative;
+  color: #1FB264;
+  font-size: 1.75em;
+  text-align: center;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #1FB264;
+  border: 3px dashed #ffffff;
+  color: #fff;
+}
+
+.image-upload-wrap span {
+	position: relative;
+	bottom: 50%;
+}
+
+#dodaj_proizvod_forma .button-ukloni,
+#dodaj_blog_forma .button-ukloni,
+#dodaj_konkurs_forma .button-ukloni {
+	display: none;
+}
+
+#izmijeni_forma .button-ukloni {
+	display: block;
+}
+
+#izmijeni_forma .image-upload-wrap,
+#izmijeni_blog_forma .image-upload-wrap,
+#izmijeni_konkurs_forma .image-upload-wrap {
+	display: none;
+}
+
+#profilna-sidebar {
+	width: 35px;
+	max-height: 40px;
+}
+
+#profilna-navbar-2 {
+	width: 100px;
+	max-height: 110px;
+}
+
+#success-poruka {
+	text-align: center;
+}
+
+.tagovi-stil {
+	visibility: hidden;
+}
+
+.error-poruka-tag {
+	visibility: hidden;
+  opacity: 0;
+  position: relative;
+  background-color: #f4f4f4;
+  color: rgb(221,75,57);
+  border: 1px solid #ccc;
+	border-radius: .4em;
+	padding: 5px;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+
+.error-polje-tag {
+	border-color: rgb(221,75,57);
+}
+
+#vrijeme_izmjena,
+#vrijeme_dodaj,
+#pocetak_konkursa_dodaj,
+#kraj_konkursa_dodaj,
+#pocetak_konkursa_izmjena,
+#kraj_konkursa_izmjena {
+	cursor: pointer;
+}
+
+#search_polje_div {
+	margin-right: 15px;
+}
+
+.dugmad-potvrde {
+	clear: both;
+	margin: 0 20px 15px 0;
+}
+
+.dugmad-potvrde button {
+	margin-right: 5px;
+}
+
+.dugmad-potvrde button:nth-of-type(2) {
+	margin-right: 0;
+}
+
+.photo_err {
+	position: relative;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+	border-radius: .4em;
+	padding: 5px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+
+.photo_err:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-top-color: #eee;
+	border-bottom: 0;
+	margin-left: -6px;
+	margin-bottom: -6px;
+}
+
+#cvr_err_por,
+#uvd_err_por,
+#cvr_err_por_izm,
+#cvr_dodaj_err,
+#cvr_izmijeni_err,
+#vrm_err_dod,
+#datum_blog_izm,
+#poc_kon_dod_err,
+#kraj_kon_dod_err,
+#poc_kon_izm,
+#kraj_kon_izm {
+	visibility: hidden;
+}
+
+#dod-pr-naslov,
+#izm-pr-naslov {
+	text-align: center;
+	margin-bottom: 20px;
+}

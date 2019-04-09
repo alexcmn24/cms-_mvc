@@ -1,0 +1,19 @@
+<?php
+
+define('WEBROOT', str_replace("Webroot/index.php", "", $_SERVER["SCRIPT_NAME"]));
+define('ROOT', str_replace("Webroot/index.php", "", $_SERVER["SCRIPT_FILENAME"]));
+
+require(ROOT . 'app/config/config.php');
+require(ROOT . 'router.php');
+require(ROOT . 'request.php');
+require(ROOT . 'dispatcher.php');
+
+spl_autoload_register(function($className) {
+    require_once 'libraries/' . $className . '.php';
+});
+    
+$dispatch = new Dispatcher();
+$dispatch->dispatch();
+
+
+?>
